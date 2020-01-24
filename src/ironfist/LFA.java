@@ -15,16 +15,34 @@ public class LFA extends Student{
     
     public LFA(){
         super();
-        setLevel(super.rank);
+        setLevel(0);
+    }
+    
+    public LFA(String n, String l)
+    {
+        super(n);
+        level = l;
+    }
+    
+    public LFA(String n, int l)
+    {
+        super(n);
+        setLevel(l);
     }
     
     public String getLevel()
     {
         return level;
     }
+    
     public void setLevel(String l)
     {
         level = l;
+    }
+    
+    public void rankUp()
+    {
+        setLevel(level + 1);
     }
     
     public void setLevel(int rank)

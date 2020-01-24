@@ -20,9 +20,9 @@ public abstract class Student {
     protected String name;
     //Profile picture
         //private img pic;
-    protected int rank;
+    //protected int rank;
     protected long TotalXP;
-    protected long intelligence, honor, combat;
+    protected long intelligence, honor, combat, experience;
         
     
     Student()
@@ -30,14 +30,21 @@ public abstract class Student {
         numStudents++;
         name = "Jason Fujii";
         TotalXP = 0;
-        rank = 0;
+        //rank = 0;
         intelligence = 0;
         honor = 0;
         combat = 0;
+        experience = 0;
     }
     
-    Student(String n, String r)
+    Student(String n)
     {
+        name = n;
+        TotalXP = 0;
+        intelligence = 0;
+        honor = 0;
+        combat = 0;
+        experience = 0;
         numStudents++;
     }
     
@@ -111,5 +118,5 @@ public abstract class Student {
         TotalXP += x;
     }
     
-    
+    public abstract void rankUp();
 }

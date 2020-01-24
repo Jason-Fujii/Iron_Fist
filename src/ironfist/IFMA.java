@@ -16,12 +16,28 @@ public class IFMA extends Student {
     public IFMA()
     {
         super();
-        setBelt(super.rank);
-        
+        setBelt(0);
+    }
+    
+    public IFMA(String n, String b)
+    {
+        super(n);
+        belt = b;
+    }
+    
+    public IFMA(String n, int b)
+    {
+        super(n);
+        setBelt(b);
     }
     
     public String getBelt(){
         return belt;
+    }
+    
+    public void rankUp()
+    {
+        setBelt(belt + 1);
     }
     
     public void setBelt(String b){
@@ -70,7 +86,7 @@ public class IFMA extends Student {
     
     public String toString()
     {
-        return name + "\nBelt: " +belt+ "\nTotal XP: " +TotalXP+ "\nIntelligence: " 
+        return name + "\nBelt: " +belt+ "\nTotal XP: " +TotalXP+ "\nExperience: " +experience+ "\nIntelligence: " 
                 +intelligence+ "\nHonor: " +honor+ "\nCombat: " + combat + "\n";
     }
 }
