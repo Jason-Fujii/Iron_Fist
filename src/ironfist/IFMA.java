@@ -31,6 +31,12 @@ public class IFMA extends Student {
         setBelt(b);
     }
     
+    public IFMA(String n)
+    {
+        super(n);
+        setBelt(0);
+    }
+    
     public String getBelt(){
         return belt;
     }

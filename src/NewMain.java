@@ -31,6 +31,15 @@ public class NewMain {
         Student g = new IFMA("Zain Blah", 18);
         Student h = new IFMA("Cole Jane", 29);
         
+        a.addIntelligence(1000);
+        b.addCombat(50);
+        c.addHonor(49);
+        d.addIntelligence(50);
+        e.addCombat(39);
+        f.addCombat(345);
+        g.addCombat(69);
+        h.addCombat(34);
+        
         StudentList list = new StudentList();
         list.insert(a);
         list.insert(b);
@@ -41,14 +50,24 @@ public class NewMain {
         list.insert(g);
         list.insert(h);
         
-        list.printList();
-        //System.out.println(list.NumStudents);
-        /*System.out.println(list.root.left.item.toString()); // Patrick
-        System.out.println(list.root.right.item.toString()); // Camden
-        System.out.println(list.root.item.toString()); // Me
-        System.out.println(list.root.right.left.item.toString());
-        System.out.println(list.root.right.right.item.toString());*/
+        //list.printList();
         
+        XPList xpList = new XPList();
+        xpList.insert(a);
+        xpList.insert(b);
+        xpList.insert(c);
+        xpList.insert(d);
+        xpList.insert(e);
+        xpList.insert(f);
+        xpList.insert(g);
+        xpList.insert(h);
+        
+        //xpList.printList();
+        
+        //GUI IFMA = new GUI();
+        //list.Search("Jason Fujii");
+        //list.Search("Daisy Acosta");
+        list.Search("Camden");
     }
     
 }
