@@ -8,6 +8,9 @@ package ironfist;
  *
  * @author jasonfujii
  */
+
+import java.io.*;
+import java.util.*;
 public class StudentList {
     private TreeNode root;
     private int NumStudents;
@@ -168,5 +171,100 @@ public class StudentList {
     }
     //public void IOList
     //sends the StudentList to a file that can be saved to the computer
+    public void PrintToFile() throws IOException, FileNotFoundException
+    {
+        //File slFile = new File("Student_Info.txt");
+        PrintWriter out = new PrintWriter("Student_Info.txt");
+        FilePrint(root,out);
+        out.close();
+    }
     
+    private void FilePrint(TreeNode tr, PrintWriter out) throws StudentListException
+    {
+        if(isEmpty())
+            throw new StudentListException("The list is empty");
+        //L r R
+        else
+        {
+            if(tr.left != null)
+            {
+                FilePrint(tr.left, out);
+            }
+            
+            //Student print
+            out.println(tr.item.toString());
+            
+            if(tr.right != null)
+                FilePrint(tr.right, out);
+        }
+    }
+    
+    public StudentList FileRead(String fileName) throws FileNotFoundException, IOException
+    {
+        StudentList IFMAStudents = new StudentList();
+        StringBuilder builder = new StringBuilder();
+        //This string will take one line at a time.
+        //Use this to determine which line of input this is:
+            //name, total XP, or other XPs
+        String line = " ";
+        File in = new File(fileName);
+        Scanner read = new Scanner(in);
+        if(in.exists())
+        {
+            while(read.hasNextLine())
+            {
+                line = read.nextLine();
+                String name = "Name not found";
+                String belt = "Belt not found";
+                long Totalxp = -1;
+                long intel = -1;
+                long hon = -1;
+                long com = -1;
+                long exp = -1;
+                for(int i = 0; i < 7; i++)
+                {
+                    if(line.contains("Belt"))
+                    {
+                        belt = line.substring(6);
+                    }
+                    else if(line.contains("Total XP"))
+                    {
+                        Totalxp = Long.parseLong(line.substring(10));
+                    }
+                    else if(line.contains("Experience"))
+                    {
+                         exp = Long.parseLong(line.substring(12));
+                    }
+                    else if(line.contains("Intelligence"))
+                    {
+                        intel = Long.parseLong(line.substring(14));
+                    }
+                    else if(line.contains("Honor"))
+                    {
+                        hon = Long.parseLong(line.substring(7));
+                    }
+                    else if(line.contains("Combat"))
+                    {
+                        com = Long.parseLong(line.substring(8));
+                    }
+                    //contains name
+                    else if(!line.equals("\n"))
+                    {
+                        name = line;
+                    }
+                    if(read.hasNextLine())
+                        line = read.nextLine();
+                }
+                Student newStudent = new IFMA(name, belt, Totalxp, intel, hon, com, exp);
+                IFMAStudents.insert(newStudent);
+            }
+            return IFMAStudents;
+        }
+        else
+        {
+            System.out.println("The file does not exist!");
+            return IFMAStudents;
+        }
+            
+    }
 }

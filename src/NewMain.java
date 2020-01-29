@@ -9,6 +9,7 @@
  * @author jasonfujii
  */
 import ironfist.*;
+import java.io.*;
 public class NewMain {
 
     /**
@@ -22,7 +23,9 @@ public class NewMain {
         two.addHonor(25);
         two.addCombat(50);
         System.out.println(two.toString());*/
-        Student a = new IFMA("Jason Fujii", 22);
+        
+        
+        /*Student a = new IFMA("Jason Fujii", 22);
         Student b = new IFMA("Patrick Tatevossian", 30);
         Student c = new IFMA("Justin Fujii", 20);
         Student d = new IFMA("Camden Brundage", 22);
@@ -38,21 +41,21 @@ public class NewMain {
         e.addCombat(39);
         f.addCombat(345);
         g.addCombat(69);
-        h.addCombat(34);
+        h.addCombat(34);*/
         
         StudentList list = new StudentList();
-        list.insert(a);
+        /*list.insert(a);
         list.insert(b);
         list.insert(c);
         list.insert(d);
         list.insert(e);
         list.insert(f);
         list.insert(g);
-        list.insert(h);
+        list.insert(h);*/
         
         //list.printList();
         
-        XPList xpList = new XPList();
+        /*XPList xpList = new XPList();
         xpList.insert(a);
         xpList.insert(b);
         xpList.insert(c);
@@ -60,14 +63,45 @@ public class NewMain {
         xpList.insert(e);
         xpList.insert(f);
         xpList.insert(g);
-        xpList.insert(h);
+        xpList.insert(h);*/
         
         //xpList.printList();
+        
+        //Read from Student_Info.txt
+        
+        try
+        {
+            list = list.FileRead("Student_Info.txt");
+        }
+        catch(FileNotFoundException fnf)
+        {
+            System.out.println("File not found");
+        }
+        catch(IOException io)
+        {
+            System.out.println("IO Exception!");
+        }
+        
+        list.printList();
+        
+        //print to Student_Info.txt
+        try
+        {
+            list.PrintToFile();
+        }
+        catch(FileNotFoundException fnf)
+        {
+            System.out.println("File not found");
+        }
+        catch(IOException io)
+        {
+            System.out.println("IO Exception");
+        }
         
         //GUI IFMA = new GUI();
         //list.Search("Jason Fujii");
         //list.Search("Daisy Acosta");
-        list.Search("Camden");
+        //list.Search("Camden");
     }
     
 }

@@ -27,7 +27,7 @@ public class GUI {
     public GUI()
     {
         frame = new JFrame("Iron Fist");
-        frame.setSize(350,200);
+        frame.setSize(500,600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         

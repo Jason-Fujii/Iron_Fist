@@ -1,0 +1,64 @@
+Alex B
+Belt: Orange
+Total XP: 345
+Experience: 0
+Intelligence: 0
+Honor: 0
+Combat: 345
+
+Camden B
+Belt: Red-Black
+Total XP: 50
+Experience: 0
+Intelligence: 50
+Honor: 0
+Combat: 0
+
+Cole J
+Belt: Black - Dan VII
+Total XP: 34
+Experience: 0
+Intelligence: 0
+Honor: 0
+Combat: 34
+
+Daisy A
+Belt: Brown-White
+Total XP: 39
+Experience: 0
+Intelligence: 0
+Honor: 0
+Combat: 39
+
+Jason F
+Belt: Red-Black
+Total XP: 1000
+Experience: 0
+Intelligence: 1000
+Honor: 0
+Combat: 0
+
+Justin F
+Belt: Red-White
+Total XP: 49
+Experience: 0
+Intelligence: 0
+Honor: 49
+Combat: 0
+
+Patrick T
+Belt: Black - Dan VIII
+Total XP: 50
+Experience: 0
+Intelligence: 0
+Honor: 0
+Combat: 50
+
+Zain B
+Belt: Brown
+Total XP: 69
+Experience: 0
+Intelligence: 0
+Honor: 0
+Combat: 69
+

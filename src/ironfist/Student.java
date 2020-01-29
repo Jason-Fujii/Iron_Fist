@@ -48,6 +48,16 @@ public abstract class Student {
         numStudents++;
     }
     
+    Student(String n, long xp, long i, long h, long c, long e)
+    {
+        name = n;
+        TotalXP = xp;
+        intelligence = i;
+        honor = h;
+        combat = c;
+        experience = e;
+        numStudents++;
+    }
     
     public int getNumStudents()
     {
