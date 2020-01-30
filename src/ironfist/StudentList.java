@@ -143,9 +143,9 @@ public class StudentList {
         NumStudents = 0;
     }
     
-    public void Search(String name)
+    public Student Search(String name)
     {
-        System.out.println(Search(name, root));
+        return Search(name, root);
     }
     
     private Student Search(String n, TreeNode tr)
@@ -171,10 +171,10 @@ public class StudentList {
     }
     //public void IOList
     //sends the StudentList to a file that can be saved to the computer
-    public void PrintToFile() throws IOException, FileNotFoundException
+    public void PrintToFile(String fileName) throws IOException, FileNotFoundException
     {
         //File slFile = new File("Student_Info.txt");
-        PrintWriter out = new PrintWriter("Student_Info.txt");
+        PrintWriter out = new PrintWriter(fileName);
         FilePrint(root,out);
         out.close();
     }

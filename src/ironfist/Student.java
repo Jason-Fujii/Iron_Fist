@@ -48,6 +48,7 @@ public abstract class Student {
         numStudents++;
     }
     
+    
     Student(String n, long xp, long i, long h, long c, long e)
     {
         name = n;
@@ -129,4 +130,32 @@ public abstract class Student {
     }
     
     public abstract void rankUp();
+    
+    public void setIntelligence(long x)
+    {
+        TotalXP -= intelligence;
+        intelligence = x;
+        TotalXP += intelligence;
+    }
+    
+    public void setHonor(long x)
+    {
+        TotalXP -= honor;
+        honor = x;
+        TotalXP += honor;
+    }
+    
+    public void setCombat(long x)
+    {
+        TotalXP -= combat;
+        combat = x;
+        TotalXP += combat;
+    }
+    
+    public void setExperience(long x)
+    {
+        TotalXP -= experience;
+        experience = x;
+        TotalXP += experience;
+    }
 }
