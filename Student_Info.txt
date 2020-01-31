@@ -46,6 +46,14 @@ Intelligence: 0
 Honor: 49
 Combat: 0
 
+Martin S
+Belt: Orange-White
+Total XP: 240
+Experience: 40
+Intelligence: 0
+Honor: 200
+Combat: 0
+
 Patrick T
 Belt: Black - Dan VIII
 Total XP: 50

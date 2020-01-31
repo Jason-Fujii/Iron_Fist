@@ -148,8 +148,11 @@ public class StudentList {
         return Search(name, root);
     }
     
-    private Student Search(String n, TreeNode tr)
+    private Student Search(String n, TreeNode tr) throws StudentListException
     {
+        if(isEmpty())
+            throw new StudentListException("List is Empty");
+        
         if(n.equals(tr.item.name))
         {
             return tr.item;
@@ -166,6 +169,7 @@ public class StudentList {
             if(tr.left != null)
                 return Search(n, tr.left);
         }
+        
         Student DNE = new IFMA("Student does not exist");
         return DNE;
     }
